@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+     <link rel="stylesheet" href="./project2.css">
+  
+</head>
+<body>
+    <div class="parampara">
+        <h1>Percentage Calculator</h1>
+        <form>
+        
+            <input type="number" id="marks" placeholder="Enter Total Marks"><br/><br/>
+            <input type="number" id="subjects" placeholder="Enter Number of Subjects" ><br/><br/>
+            <button class="btn" >Calculate</button>
+            <div id="result"></div>
+        </form>
+
+    </div>
+    <script>
+        const marks=document.getElementById('marks')
+        const subjects=document.getElementById('subjects')
+        const btn=document.getElementsByClassName('btn')[0]
+        const result=document.getElementById('result')
+
+        btn.addEventListener('click',function(e){
+            e.preventDefault()
+            const marksValue=marks.value
+            const subjectsValue=subjects.value
+            const resultValue=marksValue/subjectsValue
+            result.innerHTML=resultValue
+
+
+        })
+
+</script>
+    
+</body>
+</html>
